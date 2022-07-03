@@ -11,7 +11,7 @@ async function handleData() {
 
   const svg = d3
     .select('#svgActivity')
-  const runningData = getDataForActivity(data, "Running")
+  const runningData = getDataForActivity(data, "Treadmill Running")
   // console.log(getDataForActivity(data, 'Running'))
   const parseTime = d3.timeParse("%Y-%m-%d")
   //2013-07-14
@@ -59,7 +59,7 @@ async function handleData() {
 
   title
     .append('text')
-    .text('Runs and Distance Per Run')
+    .text('Date of Treadmill Run and Distance in Km')
     .attr('transform', `translate(${width / 2 - (margin.left + margin.right)}, 20)`)
     .attr('class', 'graphText')
 

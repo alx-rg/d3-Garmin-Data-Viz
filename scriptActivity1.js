@@ -59,7 +59,7 @@ async function handleData() {
 
   title
     .append('text')
-    .text('Runs and Distance Per Run')
+    .text('Activity and Distance Per Activity')
     .attr('transform', `translate(${width / 2 - (margin.left + margin.right)}, 20)`)
     .attr('class', 'graphText')
 
@@ -86,20 +86,6 @@ async function handleData() {
     .attr('transform', `translate(${margin.left}, 0)`)
     .call(leftAxis)
 
-}// activityType,Date,Title,Distance,Time,AvgHR,MaxHR,AvgRunCadence,MaxRunCadence,AvgPace,BestPace,MaxAvgPower,AvgPower,MaxPower,TotalStrokes,AvgSwolf,AvgStrokeRate,BestLapTime,NumberLaps
-
-  // console.log("test")
-  // const getCyclingCount = (data) => {
-  //   const cyclingCount = data.reduce((acc, activity) => {
-  //     return acc + (activityType === "cycling")
-  //   }, 0)
-  //   return cyclingCount
-  // }
-  // console.log(getCyclingCount())
-
-// const xScale = d3.scaleBand()
-//   .domain(data.map(d =>d.activityType))
-//   .range([margin.left, width + margin.left])
-//   .padding(0.05)
+}
 
 handleData()
