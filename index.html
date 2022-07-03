@@ -5,11 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garmin Data Viz</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2>Garmin Data Viz</h2>
-  <svg id="svg" width="500" height="500"></svg>
+  <h2 class="vertical">Garmin Data Viz</h2>
+  <div class="container">
+
+    <svg id="svg" width="900" height="400"></svg>
+    <svg id="svgActivity" width="900" height="400"></svg>
+    <svg id="svgActivity1" width="900" height="400"></svg>
+  </div>
+
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="script.js"></script>
+  <script src="scriptActivity.js"></script>
+  <script src="scriptActivity1.js"></script>
+  
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 ## Garmin Training data
 
-This d3 visualization is intended to create some visuals with some Garmin training data set. This will show how frequency, improvements and types of training done.
+This d3 visualization is intended to create d3 visuals with a Garmin training data set. This data viz will show frequency, improvements and types of training done.
 
 ## To Visualize
 

@@ -1,7 +1,7 @@
 
 async function handleData() {
 
-  d3.select('#svg')
+  d3.select('#svgActivity1')
 
   let data = await d3.csv('AllActivitiesTestTrimmedUp.csv')
   // console.log(data)
@@ -10,7 +10,7 @@ async function handleData() {
   const height = 400 - (margin.top + margin.bottom)
 
   const svg = d3
-    .select('#svg')
+    .select('#svgActivity1')
   const runningData = getDataForActivity(data, "Running")
   // console.log(getDataForActivity(data, 'Running'))
   const parseTime = d3.timeParse("%Y-%m-%d")
