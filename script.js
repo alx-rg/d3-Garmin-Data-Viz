@@ -17,8 +17,7 @@ async function handleData() {
     });
     return activityList
   }
-
-
+  
   const activityCountByType = getActivityTypes(data)
 
   const xScale = d3.scaleBand()
@@ -30,9 +29,7 @@ async function handleData() {
     .domain(activityCountByType.map(d => d.name))
     .range([margin.left, width + margin.left])
     .padding(0.05)
-  // console.log(activityCountByType[0].name)
   const activityExtent = d3.extent(activityCountByType, d => d.count)
-  // console.log(activityExtent)
   const yScale = d3.scaleLinear()
     .domain(activityExtent)
     .range([height, margin.top])
@@ -45,7 +42,7 @@ async function handleData() {
 
   title
     .append('text')
-    .text('Activity Types and Frequency')
+    .text('Activity Types and # Recorded')
     .attr('transform', `translate(${width / 2 - (margin.left + margin.right)}, 20)`)
     .attr('class', 'graphText')
 
@@ -61,7 +58,7 @@ async function handleData() {
     .attr('y', d => yScale(d.count))
     .attr('height', d => height - yScale(d.count))
     .attr('width', xScale.bandwidth())
-    .attr('fill', `red`)
+    .attr('fill', `orange`)
     .attr('opacity', 0.25)
 
   const bottomAxis = d3.axisBottom(xScaleName)
