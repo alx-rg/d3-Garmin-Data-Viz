@@ -1,0 +1,10 @@
+{
+  "homepage": "http://alx-rg.github.io/d3-Garmin-Data-Viz",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
